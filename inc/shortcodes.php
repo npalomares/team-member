@@ -20,12 +20,13 @@ function ek_team_member_shortcode( $atts ) {
 	if($tm_loop->have_posts()) {
 		switch($display) {		
 			case "content":
-				$content .= "<div class=\"team_wrapper\">";
+				$content .= "<div class=\"team_wrapper clearfix\">";
 				while( $tm_loop->have_posts() ) : $tm_loop->the_post();
 					$content_filtered = get_the_content();
 					$content_filtered = apply_filters('the_content', $content_filtered);
 					$content_filtered = str_replace(']]>', ']]&gt;', $content_filtered);
-					$content .= "<div class=\"tm_single\">";
+					$content .= "<div class=\"tm_single text-center col-sm-6 col-md-3\">";
+					$content .= "<div class=\"tm_headshot\">".get_the_post_thumbnail()."</div>";
 					$content .= "<h3 class=\"tm_title\">".get_the_title()."</h3>";
 					$content .= "<div class=\"tm_content\">$content_filtered</div>";
 					$content .= "</div>";
