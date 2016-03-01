@@ -27,7 +27,16 @@ function ek_team_member_shortcode( $atts ) {
 					$content_filtered = str_replace(']]>', ']]&gt;', $content_filtered);
 					$content .= "<div class=\"tm_single text-center col-sm-6 col-md-3\">";
 					$content .= "<div class=\"tm_headshot\">".get_the_post_thumbnail()."</div>";
+
 					$content .= "<h3 class=\"tm_title\">".get_the_title()."</h3>";
+
+					$content .= "<div class=\"social-wrap\">";
+					$content .= "<a href=\"#\" target=\"_blank\" class=\"social-link fb-link\">FB</a>";
+					$content .= "<a href=\"#\" target=\"_blank\" class=\"social-link insta-link\">Insta</a>";
+					$content .= "<a href=\"#\" target=\"_blank\" class=\"social-link web-link\">website</a>";
+					$content .= "<a href=\"#\" target=\"_blank\" class=\"social-link email-link\">email</a>";
+					$content .= "</div>";
+					
 					$content .= "<div class=\"tm_content\">$content_filtered</div>";
 					$content .= "</div>";
 				endwhile;

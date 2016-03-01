@@ -20,7 +20,7 @@ function create_team_member() {
 		'label'               => 'team_member',
 		'description'         => 'Team Member post type',
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'revisions', 'page-attributes', 'editor'),
+		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'revisions', 'page-attributes', 'editor', 'custom-fields'),
 		'hierarchical'        => true,
 		'public'              => true,
 		'show_ui'             => true,
